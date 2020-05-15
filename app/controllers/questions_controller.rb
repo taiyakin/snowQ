@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
+    @categorise = Category.all
   end
 
   # GET /questions/1/edit
@@ -71,6 +72,6 @@ class QuestionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def question_params
-      params.require(:question).permit(:title, :text, :video, :image, :user_id, :category_id)
+      params.require(:question).permit(:title, :text, :video, :image, :category_id).merge(user_id:current_user.id)
     end
 end
