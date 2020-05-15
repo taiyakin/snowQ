@@ -3,6 +3,7 @@
     .main-content__top-genre ＞ジャンル名:
     .main-content__top-serch
       = link_to "新規投稿", new_question_path
+      = link_to "新規登録", new_user_registration_path
 
   .main-content__list
     - @questions .each do |question|

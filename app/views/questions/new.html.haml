@@ -1,5 +1,10 @@
-%h1 New question
+.question__form
+ =form_for @question do |f|
+  = f.select :category_id, @categorise.all.map { |c| [c.genre, c.id] }
 
-= render 'form'
+  = f.text_field :title, class: "question-form__input-title", placeholder: "タイトルを入力"
+  = f.text_area :text, class: "question-form__input-text", placeholder: "質問内容を入力"
+  = f.file_field :image, class: "question-form__input-image"
+  = f.file_field :video, class: "question-form__input-video"
+  = f.submit " 送信", class: "-form-action-btn"
 
-= link_to 'Back', questions_path
