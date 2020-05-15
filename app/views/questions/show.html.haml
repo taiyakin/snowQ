@@ -1,23 +1,13 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @question.title
-%p
-  %b Text:
-  = @question.text
-%p
-  %b Video:
-  = @question.video
-%p
-  %b Image:
-  = @question.image
-%p
-  %b User:
-  = @question.user
-%p
-  %b Category:
-  = @question.category
+.contents
+ .contents__question
+  .contents__question__title
+   = @question.title
+  .contents__question__text
+   = @question.text
+  = image_tag @question.image.url, class: 'contents__question__image' if @question.image.present?
+  = video_tag @question.video.url, class: 'contents__question__video' if @question.video.present?
+ .more
+  = link_to '質問を削除', "/questions/#{@question.id}", method: :delete
 
 = link_to 'Edit', edit_question_path(@question)
 \|
