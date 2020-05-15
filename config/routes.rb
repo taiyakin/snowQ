@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  resources :likes
-  resources :answers
+  root "questions#index"
+  devise_for :users
   resources :questions
   resources :categories
-  devise_for :users
+  resources :answers
+
+  resources :categories
+  resources :likes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

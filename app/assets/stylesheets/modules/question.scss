@@ -1,0 +1,24 @@
+.question__form {
+  background-color: rgb(128, 128, 238);
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
+  .new_question{
+    height: 600px;
+    width:600px;
+    padding: 100px ;
+    .question-form__input-title {
+      background-color: white;
+      height: 100px;
+      width: 600px;
+      margin: 0 auto;
+    }
+    .question-form__input-text {
+      background-color: white ;
+      height: 400px;
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+}

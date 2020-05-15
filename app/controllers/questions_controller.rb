@@ -5,6 +5,8 @@ class QuestionsController < ApplicationController
   # GET /questions.json
   def index
     @questions = Question.all
+    @contents = [{genre:"初心者",path: "/categorises/1"},{genre:"フリーラン",path: "/categorises/2"},{genre:"カービング",path: "/categorises/3"},{genre:"パウダー",path: "/categorises/4"},{genre:"グラトリ",path: "/categorises/5"},{genre:"ラントリ",path: "/categorises/6"},{genre:"キッカー",path: "/categorises/7"},{genre:"ジブ",path: "/categorises/8"},{genre:"ハーフパイプ",path: "/categorises/9"},{genre:"バックカントリー",path: "/categorises/10"},{genre:"アルペン",path: "/categorises/11"},{genre:"俺の滑り見て！",path: "/categorises/12"},{genre:"ギア関連",path: "/categorises/13"},{genre:"その他何でも",path: "/categorises/14"},]
+
   end
 
   # GET /questions/1

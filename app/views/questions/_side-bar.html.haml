@@ -1,0 +1,4 @@
+.side-bar
+ - @contents.each do|c|
+  = link_to c[:path], class:"side-bar__content-title" do
+   = c[:genre]
