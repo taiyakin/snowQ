@@ -9,6 +9,6 @@ class CreateAnswers < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_index :answers, :text
+
   end
 end
