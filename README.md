@@ -15,7 +15,7 @@
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|genre|string|null: false, foreign_key: true|
+|genre|string|null: false|
 
 ### Association
 - has_many :questions
