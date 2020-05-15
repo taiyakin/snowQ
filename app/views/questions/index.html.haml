@@ -1,31 +1,4 @@
-%h1 Listing questions
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Text
-      %th Video
-      %th Image
-      %th User
-      %th Category
-      %th
-      %th
-      %th
-
-  %tbody
-    - @questions.each do |question|
-      %tr
-        %td= question.title
-        %td= question.text
-        %td= question.video
-        %td= question.image
-        %td= question.user
-        %td= question.category
-        %td= link_to 'Show', question
-        %td= link_to 'Edit', edit_question_path(question)
-        %td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Question', new_question_path
+.wrapper
+  = render "head-bar"
+  = render "side-bar"
+  = render "main-content"
