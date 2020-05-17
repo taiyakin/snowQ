@@ -9,12 +9,13 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new(answer_params)
     redirect_to "/questions/#{@answer.question.id}"
+    @answer.save!
   end
 
   def destroy
     @answer.destroy
     redirect_to "/questions/#{@answer.question.id}"
-    end
+
   end
 
   private
@@ -29,3 +30,4 @@ class AnswersController < ApplicationController
       params.require(:answer).permit(:text, :video, :image).merge(user_id: current_user.id, question_id: params[:question_id])
     end
 end
+

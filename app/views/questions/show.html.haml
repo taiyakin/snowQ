@@ -9,6 +9,27 @@
  .more
   = link_to '質問を削除', "/questions/#{@question.id}", method: :delete
 
-= link_to 'Edit', edit_question_path(@question)
-\|
-= link_to 'Back', questions_path
+
+ .contents__answer
+  - if current_user
+   = form_for [@question,@answer],local: true do |f|
+    = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
+    = f.submit "送信", class: "-form-action-btn"
+  - else
+   %strong
+    %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+
+
+ .contents__answer__message
+  %h4 ＜回答一覧＞
+  -if @answers
+   - @answers.each do |answer|
+    %p
+     %strong
+     = link_to answer.user.name, "/users/#{answer.user_id}"
+     ：
+     = answer.text
+     //%div{id: "like-#{answer.id}"}
+     // = render "likes/like", answer: @answer
+  - else
+%p コメントはありません
