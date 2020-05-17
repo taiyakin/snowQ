@@ -12,6 +12,9 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    Question.find(params[:id])
+    @answer = Answer.new
+    @answers= @question.answers.includes(:user)
   end
 
   # GET /questions/new
