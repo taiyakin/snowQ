@@ -21,6 +21,7 @@ class QuestionsController < ApplicationController
   def new
     @question = Question.new
     @categorise = Category.all
+
   end
 
   # GET /questions/1/edit
@@ -31,7 +32,7 @@ class QuestionsController < ApplicationController
   # POST /questions.json
   def create
     @question = Question.new(question_params)
-
+    @categorise = Category.all
     respond_to do |format|
       if @question.save
         format.html { redirect_to @question, notice: 'Question was successfully created.' }
@@ -39,6 +40,7 @@ class QuestionsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @question.errors, status: :unprocessable_entity }
+
       end
     end
   end

@@ -14,6 +14,8 @@
   - if current_user
    = form_for [@question,@answer],local: true do |f|
     = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
+    = f.file_field :image, class: "question-form__input-image"
+    = f.file_field :video, class: "question-form__input-video"
     = f.submit "送信", class: "-form-action-btn"
   - else
    %strong
@@ -29,7 +31,9 @@
      = link_to answer.user.name, "/users/#{answer.user_id}"
      ：
      = answer.text
+     = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
+     = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
      //%div{id: "like-#{answer.id}"}
      // = render "likes/like", answer: @answer
   - else
-%p コメントはありません
+   %p コメントはありません
