@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     @categorise = Category.all
     respond_to do |format|
-      if @question.save!
+      if @question.save
         format.html { redirect_to @question, notice: 'Question was successfully created.' }
         format.json { render :show, status: :created, location: @question }
       else
