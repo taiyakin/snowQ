@@ -26,14 +26,14 @@
   %h4 ＜回答一覧＞
   -if @answers
    - @answers.each do |answer|
-    %p
+    %div{id: "answer-#{answer.id}"}
      %strong
      = link_to answer.user.name, "/users/#{answer.user_id}"
      ：
      = answer.text
      = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
      = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
-     //%div{id: "like-#{answer.id}"}
-     // = render "likes/like", answer: @answer
+     %div{id: "like-#{answer.id}"}
+      = render "likes/like", answer: @answer
   - else
    %p コメントはありません
