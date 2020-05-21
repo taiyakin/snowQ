@@ -10,4 +10,6 @@ FactoryBot.define do
     association :question, factory: :question
     association :user, factory: :user
   end
+
 end
+
