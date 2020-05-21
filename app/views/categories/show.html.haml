@@ -1,9 +1,27 @@
-%p#notice= notice
+.wrapper
+  .head-bar
+    .head-bar__title  スノーボード教えてや
 
-%p
-  %b Genre:
-  = @category.genre
+  .side-bar
+    - @contents.each do|c|
+      = link_to c[:path], class:"side-bar__content-title" do
+        = c[:genre]
 
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
+  .main-content
+    .main-content__top
+      .main-content__top-genre
+        ジャンル:
+        = @category.genre
+      .main-content__top-serch
+        = link_to "新規投稿", new_question_path
+        = link_to "新規登録", new_user_registration_path
+
+    .main-content__list
+      - @category.questions .each do |question|
+        = link_to "/questions/#{question.id}", class:"main-content__list__question" do
+          .main-content__list__question-title
+            = question.title
+          .main-content__list__question-text
+            = question.text
+
+
