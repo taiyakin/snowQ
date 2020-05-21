@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
 
-  validates :name, length: { maximum: 20 }
-  validates :email, uniqueness: true
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :email,  presence: true, uniqueness: true
+  validates :password, presence: true
 end

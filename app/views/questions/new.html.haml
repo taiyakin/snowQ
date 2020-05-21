@@ -1,6 +1,6 @@
 .question__form
  =form_for @question do |f|
-  = f.select :category_id, @categorise.all.map { |c| [c.genre, c.id] }
+  = f.select :category_id, @categories.all.map { |c| [c.genre, c.id] }
 
   = f.text_field :title, class: "question-form__input-title", placeholder: "タイトルを入力"
   = f.text_area :text, class: "question-form__input-text", placeholder: "質問内容を入力"
