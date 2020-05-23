@@ -18,11 +18,11 @@ describe Question do
   end
 
   describe '#create' do
-  it "titleが20文字以上の場合は登録できないこと" do
+  it "titleが30文字以上の場合は登録できないこと" do
     question = build(:question, title: "aaaaaaaaaaaaaaaaaaaaa")
 
     question.valid?
-    expect(question.errors[:title]).to include("is too long (maximum is 20 characters)")
+    expect(question.errors[:title]).to include("is too long (maximum is 30 characters)")
     end
   end
 

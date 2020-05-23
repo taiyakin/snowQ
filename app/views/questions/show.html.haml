@@ -1,39 +1,48 @@
 .contents
- .contents__question
-  .contents__question__title
-   = @question.title
-  .contents__question__text
-   = @question.text
-  = image_tag @question.image.url, class: 'contents__question__image' if @question.image.present?
-  = video_tag @question.video.url, class: 'contents__question__video' if @question.video.present?
- .more
-  = link_to '質問を削除', "/questions/#{@question.id}", method: :delete
+  .contents__question
+    .contents__question__title
+      = @question.title
+    .contents__question__text
+      = @question.text
+      = safe_join(@question.text.split("\n"),tag(:br))
+    = image_tag @question.image.url, class: 'contents__question__image' if @question.image.present?
+    = video_tag @question.video.url, class: 'contents__question__video' if @question.video.present?
+  .more
+    = @question.user.name
+    さんからの質問です
+    - if user_signed_in? && current_user.id == @question.user.id
+      = link_to '質問を削除', "/questions/#{@question.id}", method: :delete
 
 
- .contents__answer
-  - if current_user
-   = form_for [@question,@answer],local: true do |f|
-    = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
-    = f.file_field :image, class: "question-form__input-image"
-    = f.file_field :video, class: "question-form__input-video"
-    = f.submit "送信", class: "-form-action-btn"
-  - else
-   %strong
-    %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+  .contents__answer
+    - if current_user
+      = form_for [@question,@answer],local: true do |f|
+        = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
+        = f.label :image, class:"image_input_btn" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: "image_form"
+        = f.label :video, class:"image_input_btn" do
+          = icon('fas', 'film', class: 'icon')
+          = f.file_field :video, class: "image_form"
+        = f.submit "回答する", class: "form-action-btn"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
 
- .contents__answer__message
-  %h4 ＜回答一覧＞
-  -if @answers
-   - @answers.each do |answer|
-    %div{id: "answer-#{answer.id}"}
-     %strong
-     = link_to answer.user.name, "/users/#{answer.user_id}"
-     ：
-     = answer.text
-     = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
-     = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
-     %div{id: "like-#{answer.id}"}
-      = render "likes/like", answer: @answer
-  - else
-   %p コメントはありません
+  .contents__answer__message
+    %h4 ＜回答一覧＞
+    -if @answers
+      - @answers.each do |answer|
+        %div{id: "answer-#{answer.id}"}
+        .message
+          = link_to answer.user.name, "/users/#{answer.user_id}"
+          ：
+          = safe_join(answer.text.split("\n"),tag(:br))
+
+          = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
+          = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
+          %div{id: "like-#{answer.id}"}
+            = render "likes/like", answer: @answer
+    - else
+      %p コメントはありません

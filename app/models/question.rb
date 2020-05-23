@@ -4,7 +4,7 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validates :user, presence: true
-  validates :title, presence: true, length: { maximum: 20 }
+  validates :title, presence: true, length: { maximum: 30 }
   validates :text, presence: true
 
   mount_uploader :video, VideoUploader

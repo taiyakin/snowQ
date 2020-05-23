@@ -1,11 +1,6 @@
 .wrapper
-  .head-bar
-    .head-bar__title  スノーボード教えてや
-
-  .side-bar
-    - @contents.each do|c|
-      = link_to c[:path], class:"side-bar__content-title" do
-        = c[:genre]
+  = render "questions/head-bar"
+  = render "questions/side-bar"
 
   .main-content
     .main-content__top
@@ -13,8 +8,9 @@
         ジャンル:
         = @category.genre
       .main-content__top-serch
-        = link_to "新規投稿", new_question_path
-        = link_to "新規登録", new_user_registration_path
+
+      = render "users/login"
+
 
     .main-content__list
       - @category.questions .each do |question|
@@ -23,5 +19,6 @@
             = question.title
           .main-content__list__question-text
             = question.text
+
 
 
