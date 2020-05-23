@@ -1,6 +1,6 @@
 .main-content__top-user
   - if user_signed_in?
-    = link_to "新規投稿", new_question_path,class:"form-action-btn"
+    = link_to "投稿する", new_question_path,class:"form-action-btn"
     = link_to "マイページ", user_path(current_user), class:   "main-content__top-user__my-page"
     = link_to "ログアウト", destroy_user_session_path, method: :delete, class:  "main-content__top-user__my-page"
 
