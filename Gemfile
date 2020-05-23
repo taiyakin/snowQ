@@ -76,3 +76,5 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'jquery-rails'
+gem 'faker', "~> 2.8"
+gem 'kaminari'

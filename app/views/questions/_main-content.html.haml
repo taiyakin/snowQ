@@ -1,9 +1,9 @@
 .main-content
   .main-content__top
-    .main-content__top-genre ＞ジャンル名:
+    .main-content__top-genre ＞全てのジャンル
     .main-content__top-serch
-      = link_to "新規投稿", new_question_path
-      = link_to "新規登録", new_user_registration_path
+
+    = render "users/login"
 
   .main-content__list
     - @questions .each do |question|
@@ -12,4 +12,6 @@
           = question.title
         .main-content__list__question-text
           = question.text
+          = safe_join(question.text.split("\n"),tag(:br))
+= paginate(@questions)
 
