@@ -78,7 +78,7 @@ gem 'devise-i18n-views'
 gem 'rails-i18n', '~> 5.1'
 gem 'pry-rails'
 gem 'carrierwave'
-gem 'fog-aws'
+
 gem 'rmagick'
 gem 'jquery-rails'
 gem 'faker', "~> 2.8"
