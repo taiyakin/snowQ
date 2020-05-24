@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: snowQ_production
-  username: snowQ
-  password: <%= ENV['SNOWQ_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  url: <%= ENV['DATABASE_URL'] %>
