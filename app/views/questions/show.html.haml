@@ -42,7 +42,9 @@
 
           = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
           = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
-          %div{id: "like-#{answer.id}"}
-            = render "likes/like", answer: @answer
+          //%div{id: "like-#{answer.id}"}
+          //  = render "likes/like", answer: @answer
     - else
       %p コメントはありません
+  = link_to root_path,class: "link-blue" do
+    トップページに戻る
