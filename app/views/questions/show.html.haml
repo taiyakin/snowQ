@@ -3,7 +3,6 @@
     .contents__question__title
       = @question.title
     .contents__question__text
-      = @question.text
       = safe_join(@question.text.split("\n"),tag(:br))
     = image_tag @question.image.url, class: 'contents__question__image' if @question.image.present?
     = video_tag @question.video.url, class: 'contents__question__video' if @question.video.present?
