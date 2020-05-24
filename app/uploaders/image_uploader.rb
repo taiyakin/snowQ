@@ -4,12 +4,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_fit: [500, 500]
   # Choose what kind of storage to use for this uploader:
-  if Rails.env.production? || Rails.env.staging?
-    storage :fog
-  else
-    storage :file
-  end
-
+  storage :file
+  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -45,13 +41,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def size_range
     1..10.megabytes
-  end
-
-  protected
-  # 一意となるトークンを作成
-  def secure_token
-     var = :"@#{mounted_as}_secure_token"
-     model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
   end
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
