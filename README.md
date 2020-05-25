@@ -1,4 +1,6 @@
 # snowQ
+[![Image from Gyazo](https://i.gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4.jpg)](https://gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4)
+
 スノーボード技術に関する質問ができるアプリです。
 スノーボードのジャンルごとに分けて細かく質問することができます。
 
@@ -44,7 +46,9 @@ Pass : aaaaaaaa
 ここから生まれる交流によってスノーボードを愛する人が増えること、その一助になることを願います！
 
 ## DEMO
-[![Image from Gyazo](https://i.gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4.jpg)](https://gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4)
+[![Image from Gyazo](https://i.gyazo.com/6423beb275236f662acb7b7fb5f31fa4.gif)](https://gyazo.com/6423beb275236f662acb7b7fb5f31fa4)
+
+[![Image from Gyazo](https://i.gyazo.com/bb68f586b5288c5b2898dce6389abcc0.gif)](https://gyazo.com/bb68f586b5288c5b2898dce6389abcc0)
 
 
 ## 工夫したポイント
