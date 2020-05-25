@@ -59,13 +59,13 @@ Pass : aaaaaaaa
 - 本番環境では動画や画像はS3に保存される
 
 ## 使用技術（開発環境）
-Ruby 2.5.1
-Rails 5.2.3
-Rspec
-HAML
-SCSS
-AWS(S3)
-heroku
+Ruby 2.5.1<br>
+Rails 5.2.3<br>
+Rspec<br>
+HAML<br>
+SCSS<br>
+AWS(S3)<br>
+heroku<br>
 
 
 ## 課題や今後実装したい機能
