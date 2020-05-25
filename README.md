@@ -54,9 +54,13 @@ Pass : aaaaaaaa
 ## 工夫したポイント
 - ページネーション機能実装 一度に表示できるのは20件まで
 - 投稿をカテゴリごとに分類することで見やすく表示
+[![Image from Gyazo](https://i.gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3.gif)](https://gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3)
+
 - 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
-- ジャンルごとに区分することで質問の内容を明確に
+[![Image from Gyazo](https://i.gyazo.com/7b95aa7a2358c7579843b43e3d6351a0.gif)](https://gyazo.com/7b95aa7a2358c7579843b43e3d6351a0)
+
 - ユーザーの名前をクリックするとそのユーザーの質問一覧が表示される
+
 - 「自分の投稿」をクリックで自分の投稿一覧が見れる
 - 本番環境では動画や画像はS3に保存される
 
