@@ -18,7 +18,7 @@
           .main-content__list__question-title
             = question.title
           .main-content__list__question-text
-            = question.text
+            = safe_join(question.text.split("\n"),tag(:br))
 
 
 
