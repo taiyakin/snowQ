@@ -1,4 +1,7 @@
 # snowQ
+https://snow9taiyaki.herokuapp.com/
+[![Image from Gyazo](https://i.gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4.jpg)](https://gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4)
+
 スノーボード技術に関する質問ができるアプリです。
 スノーボードのジャンルごとに分けて細かく質問することができます。
 
@@ -44,14 +47,28 @@ Pass : aaaaaaaa
 ここから生まれる交流によってスノーボードを愛する人が増えること、その一助になることを願います！
 
 ## DEMO
+[![Image from Gyazo](https://i.gyazo.com/6423beb275236f662acb7b7fb5f31fa4.gif)](https://gyazo.com/6423beb275236f662acb7b7fb5f31fa4)
+
+[![Image from Gyazo](https://i.gyazo.com/bb68f586b5288c5b2898dce6389abcc0.gif)](https://gyazo.com/bb68f586b5288c5b2898dce6389abcc0)
 
 
 ## 工夫したポイント
 - ページネーション機能実装 一度に表示できるのは20件まで
+[![Image from Gyazo](https://i.gyazo.com/05ca7b03f5d17415571e3cfb336143da.gif)](https://gyazo.com/05ca7b03f5d17415571e3cfb336143da)
+
+
 - 投稿をカテゴリごとに分類することで見やすく表示
+[![Image from Gyazo](https://i.gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3.gif)](https://gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3)
+
+
 - 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
-- ジャンルごとに区分することで質問の内容を明確に
+[![Image from Gyazo](https://i.gyazo.com/7b95aa7a2358c7579843b43e3d6351a0.gif)](https://gyazo.com/7b95aa7a2358c7579843b43e3d6351a0)
+
+
 - ユーザーの名前や「自分の投稿」クリックするとそのユーザーの質問一覧が表示される
+[![Image from Gyazo](https://i.gyazo.com/6a7d87b2cdad0ecda6f779416f2a5d85.gif)](https://gyazo.com/6a7d87b2cdad0ecda6f779416f2a5d85)
+
+
 - 本番環境では動画や画像はS3に保存される
 
 
