@@ -1,27 +1,17 @@
 class LikesController < ApplicationController
 
-  
-  # GET /likes/new
-  def new
-    @like = Like.new
-  end
-
   def create
-
-    @like = Like.create(user_id: current_user.id, answer_id: params[:answer_id])
-
-    @like.save!
+    @like = current_user.likes.create(answer_id:  params[:answer_id])
+    render 'create.js.erb'
+    # current_user.likes.create!を使う方がrails way
   end
 
 
-  # DELETE /likes/1
-  # DELETE /likes/1.json
   def destroy
+    # @like は未代入の変数
+    @like = Like.find_by(user_id: current_user.id, answer_id: params[:answer_id])
     @like.destroy
-    respond_to do |format|
-      format.html { redirect_to likes_url, notice: 'Like was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    render 'destroy.js.erb'
   end
 
   private
@@ -35,6 +25,6 @@ class LikesController < ApplicationController
   end
 
   def like_params
-  params.require(:like).merge(user_id: current_user.id, answer_id:@answer.id)
+    params.require(:like).merge(user_id: current_user.id, answer_id:@answer.id)
   end
 end
