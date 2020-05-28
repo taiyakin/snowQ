@@ -5,7 +5,7 @@
     .contents__question__text
       = safe_join(@question.text.split("\n"),tag(:br))
     = image_tag @question.image.url, class: 'contents__question__image' if @question.image.present?
-    = video_tag @question.video.url, class: 'contents__question__video' if @question.video.present?
+    = video_tag @question.video.url,controls: true, class: 'contents__question__video' if @question.video.present?
   .more
     = @question.user.name
     さんからの質問です
@@ -40,7 +40,7 @@
           = safe_join(answer.text.split("\n"),tag(:br))
 
           = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
-          = video_tag answer.video.url, class: 'contents__question__video' if answer.video.present?
+          = video_tag answer.video.url,controls: true, class: 'contents__question__video' if answer.video.present?
           %div{id: "like-#{answer.id}"}
             = render "likes/like", answer: answer
     - else

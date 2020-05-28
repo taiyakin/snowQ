@@ -8,7 +8,6 @@ class LikesController < ApplicationController
 
 
   def destroy
-    # @like は未代入の変数
     @like = Like.find_by(user_id: current_user.id, answer_id: params[:answer_id])
     @like.destroy
     render 'destroy.js.erb'
