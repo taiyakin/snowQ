@@ -4,6 +4,7 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   def self.search(search)
+# serchメソッドを定義。titleカラムかtextカラムにinput内容が含まれる質問を検索、なければ全部
     if search
       Question.where('text LIKE(?)', "%#{search}%").or(Question.where('title LIKE(?)', "%#{search}%")).order(created_at: :desc)
     else
