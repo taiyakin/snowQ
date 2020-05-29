@@ -1,12 +1,12 @@
 $(function() {
   var search_list = $(".main-content__list");
-//検索結果（質問リスト）の HTMLを生成
+  //検索結果（質問リスト）の HTMLを生成
   function appendQuestion(question) {
   var html = `<a class="main-content__list__question" href="/questions/${question.id}">
                 <div class='main-content__list__question-title'>${question.title}</div>
                 <div class='main-content__list__question-text'>${question.text}</div>
-              </a>`
-//HTMLを追加
+            </a>`
+  //HTMLを追加
   search_list.append(html);
  }
 //エラーメッセージ
