@@ -15,15 +15,15 @@ https://snow9taiyaki.herokuapp.com/
 
 
 ## 概要
-- アカウント登録して質問を投稿
 - 質問したいジャンルを選択して投稿、写真や動画も一緒に投稿できる
 - 投稿された質問一覧はトップページに、サイドバーからジャンルごとに表示できる
 - 投稿された質問をクリックすると詳細が見れる。そこから質問に対する回答が可能
 - 回答する際も画像、動画が投稿可能
 - 回答に対していいねが付けられる
+- インクリメンタルサーチ
 
 ## リンク
-
+https://snow9taiyaki.herokuapp.com/
 
 質問者テストアカウント
 email: test@test
@@ -54,13 +54,14 @@ Pass : aaaaaaaa
 
 
 ## 工夫したポイント
+- 質問を非同期で検索（タイトルoテキスト）
+[![Image from Gyazo](https://i.gyazo.com/8b15a281a8090a3857ff8fe067a3b5fc.gif)](https://gyazo.com/8b15a281a8090a3857ff8fe067a3b5fc)
+
 - ページネーション機能実装 一度に表示できるのは20件まで
 [![Image from Gyazo](https://i.gyazo.com/05ca7b03f5d17415571e3cfb336143da.gif)](https://gyazo.com/05ca7b03f5d17415571e3cfb336143da)
 
-
 - 投稿をカテゴリごとに分類することで見やすく表示
 [![Image from Gyazo](https://i.gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3.gif)](https://gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3)
-
 
 - 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
 [![Image from Gyazo](https://i.gyazo.com/7b95aa7a2358c7579843b43e3d6351a0.gif)](https://gyazo.com/7b95aa7a2358c7579843b43e3d6351a0)
@@ -87,7 +88,6 @@ heroku<br>
 
 ## 課題や今後実装したい機能
 - アンサーの投稿の非同期通信
-- インクリメンタルサーチ
 - いいねの数が多い順に表示
 - タグ付けによって検索機能を向上
 - SNSアカウントを紐付ける
