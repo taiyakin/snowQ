@@ -5,7 +5,7 @@ class Question < ApplicationRecord
 
   def self.search(search)
     if search
-      Question.where('text LIKE(?)', "%#{search}%").order(created_at: :desc)
+      Question.where('text LIKE(?)', "%#{search}%").or(Question.where('title LIKE(?)', "%#{search}%")).order(created_at: :desc)
     else
       Question.all.order(created_at: :desc)
     end
