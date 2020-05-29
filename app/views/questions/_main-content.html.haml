@@ -4,7 +4,7 @@
     .main-content__top-serch
       = form_with(url: search_questions_path, local: true, method: :get, class: "search-form") do |form|
         = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-        = form.submit "検索", class: "search-btn"
+
     = render "users/login"
 
   .main-content__list
