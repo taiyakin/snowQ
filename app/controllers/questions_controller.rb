@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @questions = Question.all.order(created_at: :desc).page(params[:page]).per(20)
@@ -68,6 +69,15 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def search
+    @questions = Question.search(params[:keyword]).order(created_at: :desc).page(params[:page]).per(20)
+    respond_to do |format|
+      format.html
+      format.json
+
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
@@ -78,5 +88,9 @@ class QuestionsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def question_params
       params.require(:question).permit(:title, :text, :video, :image, :category_id).merge(user_id:current_user.id)
+    end
+
+    def move_to_index
+      redirect_to action: :index unless user_signed_in?
     end
 end
