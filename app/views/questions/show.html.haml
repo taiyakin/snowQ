@@ -21,12 +21,13 @@
     - if current_user
       = form_for [@question,@answer],local: true do |f|
         = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
-        = f.label :image, class:"image_input_btn" do
-          = icon('fas', 'image', class: 'icon')
-          = f.file_field :image, class: "image_form"
-        = f.label :video, class:"image_input_btn" do
-          = icon('fas', 'film', class: 'icon')
-          = f.file_field :video, class: "image_form"
+        .image__input
+          = f.label :image, class:"image__input__btn" do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: "image__form"
+          = f.label :video, class:"image__input__btn" do
+            = icon('fas', 'film', class: 'icon')
+            = f.file_field :video, class: "image__form"
         = f.submit "回答する", class: "form-action-btn"
     - else
       %strong
