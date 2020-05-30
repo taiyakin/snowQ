@@ -10,7 +10,7 @@
     = @question.user.name
     さんからの質問です
     - if user_signed_in? && current_user.id == @question.user.id
-      = link_to '質問を削除', "/questions/#{@question.id}", class:"delet-btn", method: :delete
+      = link_to '質問を削除', "/questions/#{@question.id}", class:"delete-btn", method: :delete
 
 
   .contents__answer
