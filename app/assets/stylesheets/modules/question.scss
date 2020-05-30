@@ -3,15 +3,24 @@
   height: 800px;
   width: 800px;
   margin: 0 auto;
+  &__error {
+    padding: 20px 40px 0 40px;
+    li{
+      list-style: none;
+      color: red;
+    }
+  }
   .new_question{
     height: 600px;
     width:600px;
     padding: 100px ;
+
     .question-form__input-title {
       background-color: white;
       height: 100px;
       width: 600px;
       margin: 0 auto;
+
     }
     .question-form__input-text {
       background-color: white ;

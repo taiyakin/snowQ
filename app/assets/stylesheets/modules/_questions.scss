@@ -252,3 +252,13 @@ font-weight: bold;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f997b0 50%', endColorstr='#f56778 50%')";
 }
 
+.link-blue {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  transition: .4s;
+  margin-bottom: 20px;
+
+}

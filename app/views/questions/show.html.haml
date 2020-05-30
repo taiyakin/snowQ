@@ -14,6 +14,10 @@
 
 
   .contents__answer
+    - if @answer.errors.any?
+      .contents__answer__error
+        - @answer.errors.full_messages.each do |message|
+          %li= message
     - if current_user
       = form_for [@question,@answer],local: true do |f|
         = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"

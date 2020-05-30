@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
   def create
     @answer = Answer.new(answer_params)
     redirect_to "/questions/#{@answer.question.id}"
-    @answer.save!
+    @answer.save
   end
 
   def destroy
