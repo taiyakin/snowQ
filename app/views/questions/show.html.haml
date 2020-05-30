@@ -10,7 +10,7 @@
     = @question.user.name
     さんからの質問です
     - if user_signed_in? && current_user.id == @question.user.id
-      = link_to '質問を削除', "/questions/#{@question.id}", method: :delete
+      = link_to '質問を削除', "/questions/#{@question.id}", class:"delet-btn", method: :delete
 
 
   .contents__answer
@@ -49,5 +49,6 @@
             = render "likes/like", answer: answer
     - else
       %p コメントはありません
-  = link_to root_path,class: "link-blue" do
-    トップページに戻る
+  .link__top
+    = link_to root_path,class: "link__top--btm" do
+      トップページに戻る

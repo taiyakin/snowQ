@@ -43,3 +43,21 @@
     width: 15%;
   }
 }
+
+.delet-btn{
+  position: relative;
+  border-radius: 4px;
+  color: rgb(219, 13, 13);
+  line-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0px 1px 0px #f56778;
+  margin-left: 20px;
+}
+.more{
+  display: flex;
+  justify-content: space-between;
+}
