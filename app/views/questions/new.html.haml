@@ -3,14 +3,16 @@
     .question__form__error
       - @question.errors.full_messages.each do |message|
         %li= message
-  =form_for @question do |f|
-    = f.select :category_id, @categories.all.map { |c| [c.genre, c.id] }
-    = f.text_field :title, class: "question-form__input-title", placeholder: "タイトルを入力"
-    = f.text_area :text, class: "question-form__input-text", placeholder: "質問内容を入力"
-    = f.label :image, class:"image_input_btn" do
-      = icon('fas', 'image', class: 'icon')
-      = f.file_field :image, class: "image_form"
-    = f.label :video, class:"image_input_btn" do
-      = icon('fas', 'film', class: 'icon')
-      = f.file_field :video, class: "image_form"
-    = f.submit "送信", class: "form-action-btn"
+  .question-form__input
+    =form_for @question do |f|
+      = f.select :category_id, @categories.all.map { |c| [c.genre, c.id] }
+      = f.text_field :title, class: "question__form__input__title", placeholder: "タイトルを入力"
+      = f.text_area :text, class: "question__form__input__text", placeholder: "質問内容を入力"
+      .question__form__input__image
+        = f.label :image, class:"question__form__input__image__btn" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class:"question__form__input__image__form"
+        = f.label :video, class:"question__form__input__image__btn" do
+          = icon('fas', 'film', class: 'icon')
+          = f.file_field :video, class:"question__form__input__image__form"
+      = f.submit "送信", class: "form-action-btn"

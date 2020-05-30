@@ -122,11 +122,10 @@
     }
     &__page-nate {
       width: 100%;
-      margin:20px 50px;
+      margin: 20px 50px;
       text-align: center;
     }
   }
-
 }
 
 .contents {
@@ -141,17 +140,16 @@
     height: 500px;
     background-size: cover;
     background-position: center center;
-    border-radius: 3px;
     box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
     overflow: scroll;
     border-radius: 5px;
     background-color: #ced8ec62;
-    color: #337ab7;
+    color: $light_blue;
     &__title {
       height: 100px;
       width: 100%;
       margin-bottom: 10px;
-      font-size: 4rem;
+      font-size: 3rem;
       border-radius: 5px;
       background-color: #aaa;
     }
@@ -208,7 +206,7 @@
 
   &__answer__message {
     background-color: #ced8ec62;
-    color: #337ab7;
+    color: $light_blue;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
     margin-bottom: 50px;
@@ -228,6 +226,7 @@
       transition: 0.4s;
       text-align: center;
       width: 100%;
+      border-radius: 5px;
     }
   }
 }
