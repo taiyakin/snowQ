@@ -1,24 +1,17 @@
 .wrapper
   = render "questions/head-bar"
   = render "questions/side-bar"
-
   .main-content
     .main-content__top
       .main-content__top-genre
         ジャンル:
         = @category.genre
       = render "questions/search"
-
       = render "users/login"
-
-
     .main-content__list
-      - @questions .each do |question|
-        = link_to "/questions/#{question.id}", class:"main-content__list__question" do
-          .main-content__list__question-title
-            = question.title
-          .main-content__list__question-text
-            = safe_join(question.text.split("\n"),tag(:br))
+      = render partial: 'questions/question', collection: @questions
+      .main-content__list__page-nate
+        = paginate(@questions)
 
 
 
