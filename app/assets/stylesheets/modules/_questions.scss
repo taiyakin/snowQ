@@ -8,22 +8,22 @@
   height: 170px;
   position: fixed;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-   &__title {
-     height: 100px;
-     width: 210px;
-     margin: 0 auto;
-     font-family: 'Baloo Bhaina', cursive;
-     font-size: 100px;
-     font-weight: bold;
-     color: rgb(88, 74, 211);
-     text-shadow: 3px 3px 0 #99bbe2, 6px 6px 0 #6798d2, 9px 9px 0 #2769b7;
-     -webkit-transform: skewY(-7deg);
-     -ms-transform: skewY(-7deg);
-     -moz-transform: skewY(-7deg);
-     -o-transform: skewY(-7deg);
-     transform: skewY(-7deg);
+    &__title {
+      height: 100px;
+      width: 210px;
+      margin: 0 auto;
+      font-family: 'Baloo Bhaina', cursive;
+      font-size: 100px;
+      font-weight: bold;
+      color: rgb(88, 74, 211);
+      text-shadow: 3px 3px 0 #99bbe2, 6px 6px 0 #6798d2, 9px 9px 0 #2769b7;
+      -webkit-transform: skewY(-7deg);
+      -ms-transform: skewY(-7deg);
+      -moz-transform: skewY(-7deg);
+      -o-transform: skewY(-7deg);
+      transform: skewY(-7deg);
 
-   }
+    }
   &__acount {
     height:50px;
     width:100px;
@@ -69,17 +69,17 @@
   overflow-y:scroll;
 
 
- &__top {
- width: 100%;
- height: 50px;
- background-color: skyblue;
- display: flex;
- justify-content: space-between;
- box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-  &-genre{
-    width: 200px;
+  &__top {
+  width: 100%;
+  height: 50px;
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    &-genre{
+      width: 200px;
 
- }
+    }
   &-serch {
     width: 300px;
   }
@@ -92,56 +92,56 @@
   }
 }
 
- &__list {
-   height: calc(100vh - 50px);
-   width: calc(100vw - 200px);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:flex-start;
+  &__list {
+    height: calc(100vh - 50px);
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
 
-   &__question {
-     width:250px;
-     height: 350px;
-     background-color:#ced8ec62;
-     margin: 10px;
-     border-radius:5px;
-     box-shadow: 0 0 10px rgba(41,41,41,0.2);
-     word-break: normal;
-
-     &-title {
-       width: 230px;
-       height:70px;
-       background-color: #aaa;
-       margin: 10px;
-       padding: 10px;
-       border-radius:5px;
-       box-shadow: 0 0 10px rgba(41,41,41,0.2);
-       word-break: normal;
-     }
-     &-text {
-       width: 230px;
-       height: 250px;
-      background-color: #ddd;
-      margin : 10px;
-      padding: 10px;
+    &__question {
+      width:250px;
+      height: 350px;
+      background-color:#ced8ec62;
+      margin: 10px;
       border-radius:5px;
-      overflow: hidden;
-     }
-   }
+      box-shadow: 0 0 10px rgba(41,41,41,0.2);
+      word-break: normal;
 
- }
+      &-title {
+        width: 230px;
+        height:70px;
+        background-color: #aaa;
+        margin: 10px;
+        padding: 10px;
+        border-radius:5px;
+        box-shadow: 0 0 10px rgba(41,41,41,0.2);
+        word-break: normal;
+      }
+      &-text {
+        width: 230px;
+        height: 250px;
+        background-color: #ddd;
+        margin : 10px;
+        padding: 10px;
+        border-radius:5px;
+        overflow: hidden;
+      }
+    }
+
+  }
 }
 
 
 .contents{
- width: 100%;
- margin-left: auto;
- margin-right: auto;
- margin-top: 0;
- margin-bottom: 0;
- max-width: 660px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 660px;
 
- &__question{
+  &__question{
   margin: 20px 0;
   padding: 30px;
   position: relative;
@@ -171,26 +171,26 @@
   object-fit: cover;
   cursor: pointer;
  }
- }
- &__answer{
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41,41,41,0.2);
-  background-color: white;
-  box-sizing: border-box;
-  &__form{
-    width: 93%;
   }
- }
+  &__answer{
+    margin: 20px 0;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(41,41,41,0.2);
+    background-color: white;
+    box-sizing: border-box;
+    &__form{
+      width: 93%;
+    }
+  }
 
- &__answer__message{
- box-shadow: 0 0 10px rgba(41,41,41,0.2);
- margin-bottom: 50px;
- padding: 30px;
- }
- .link__top{
-  width:100%;
-  height:100px;
+  &__answer__message{
+  box-shadow: 0 0 10px rgba(41,41,41,0.2);
+  margin-bottom: 50px;
+  padding: 30px;
+  }
+  .link__top{
+    width:100%;
+    height:100px;
 
 
   .link__top--btm {
