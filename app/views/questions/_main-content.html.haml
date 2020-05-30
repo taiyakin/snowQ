@@ -1,12 +1,10 @@
 .main-content
   .main-content__top
     .main-content__top-genre ＞全てのジャンル
-    = render "serch"
-
+    = render "search"
     = render "users/login"
-
   .main-content__list
     = render partial: 'question', collection: @questions
-
-= paginate(@questions)
+    .main-content__list__page-nate
+      = paginate(@questions)
 
