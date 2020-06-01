@@ -14,10 +14,6 @@
 
 
   .contents__answer
-    - if @answer.errors.any?
-      .contents__answer__error
-        - @answer.errors.full_messages.each do |message|
-          %li= message
     - if current_user
       = form_for [@question,@answer],local: true do |f|
         = f.text_area :text, class: "contents__answer__form", placeholder: "回答を入力"
@@ -31,12 +27,12 @@
         = f.submit "回答する", class: "form-action-btn"
     - else
       %strong
-        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        %p ※※※ コメントの閲覧、投稿には新規登録/ログインが必要です ※※※
 
 
   .contents__answer__message
     %h4 ＜回答一覧＞
-    -if @answers
+    -if @answers && current_user
       - @answers.each do |answer|
         %div{id: "answer-#{answer.id}"}
         .message

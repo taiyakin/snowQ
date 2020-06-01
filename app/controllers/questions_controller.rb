@@ -10,7 +10,6 @@ class QuestionsController < ApplicationController
   def show
     @answer = Answer.new
     @answers= @question.answers.includes(:user)
-
   end
 
   def new
@@ -18,23 +17,17 @@ class QuestionsController < ApplicationController
     @categories = Category.all
   end
 
-
   def edit
-
   end
 
   def create
     @question = Question.new(question_params)
-    @categories = Category.all
-    respond_to do |format|
-      if @question.save
-        format.html { redirect_to @question, notice: 'Question was successfully created.' }
-        format.json { render :show, status: :created, location: @question }
-      else
-        format.html { render :new }
-        format.json { render json: @question.errors, status: :unprocessable_entity }
 
-      end
+
+    if @question.save
+      redirect_to @question
+    else
+      render :new
     end
   end
 
@@ -49,7 +42,6 @@ class QuestionsController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @question.destroy

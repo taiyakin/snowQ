@@ -1,10 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: [:destroy]
 
-  # GET /answers/new
-  def new
-    @answer = Answer.new
-  end
 
   def create
     @answer = Answer.new(answer_params)
@@ -17,9 +12,7 @@ class AnswersController < ApplicationController
     redirect_to "/questions/#{@answer.question.id}"
   end
 
-
   private
-
     def set_answer
       @answer = Answer.find(params[:id])
     end
