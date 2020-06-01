@@ -39,17 +39,18 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -63,24 +64,23 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'fog-aws'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-gem 'haml-rails'
-gem 'font-awesome-sass'
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-gem 'rails-i18n', '~> 5.1'
-gem 'pry-rails'
-gem 'carrierwave'
-
-gem 'rmagick'
-gem 'jquery-rails'
 gem 'faker', "~> 2.8"
+gem 'font-awesome-sass'
+gem 'haml-rails'
+gem 'jquery-rails'
 gem 'kaminari'
+gem 'pry-rails'
+gem 'rails-i18n', '~> 5.1'
+gem 'rmagick'
