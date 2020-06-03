@@ -50,13 +50,13 @@ Pass : aaaaaaaa
 
 ## 工夫したポイント
 - 質問を非同期で検索（タイトルoテキスト）
-[![Image from Gyazo](https://i.gyazo.com/8b15a281a8090a3857ff8fe067a3b5fc.gif)](https://gyazo.com/8b15a281a8090a3857ff8fe067a3b5fc)
+[![Image from Gyazo](https://i.gyazo.com/312a920cc7dac6d707bf81a8831b9ec0.gif)](https://gyazo.com/312a920cc7dac6d707bf81a8831b9ec0)
 
-- ページネーション機能実装 一度に表示できるのは20件まで
-[![Image from Gyazo](https://i.gyazo.com/05ca7b03f5d17415571e3cfb336143da.gif)](https://gyazo.com/05ca7b03f5d17415571e3cfb336143da)
+- ページネーション機能実装 
+[![Image from Gyazo](https://i.gyazo.com/04be10d69843e69660a9010f78bb2f49.gif)](https://gyazo.com/04be10d69843e69660a9010f78bb2f49)
 
 - 投稿をカテゴリごとに分類することで見やすく表示
-[![Image from Gyazo](https://i.gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3.gif)](https://gyazo.com/50fd7e08b4c490e9cacc70de66b4b2c3)
+[![Image from Gyazo](https://i.gyazo.com/3492b4b612df769f84d087780513a61d.gif)](https://gyazo.com/3492b4b612df769f84d087780513a61d)
 
 - 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
 [![Image from Gyazo](https://i.gyazo.com/7b95aa7a2358c7579843b43e3d6351a0.gif)](https://gyazo.com/7b95aa7a2358c7579843b43e3d6351a0)
