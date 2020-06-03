@@ -1,6 +1,6 @@
 # snowQ
 https://snow9taiyaki.herokuapp.com/
-[![Image from Gyazo](https://i.gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4.jpg)](https://gyazo.com/42550086b9a2f0cb3aaa4b5c4bd0ced4)
+[![Image from Gyazo](https://i.gyazo.com/a43473372a532e3df0cc290ca5391864.png)](https://gyazo.com/a43473372a532e3df0cc290ca5391864)
 
 スノーボード技術に関する質問ができるアプリです。
 スノーボードのジャンルごとに分けて細かく質問することができます。
@@ -21,9 +21,6 @@ https://snow9taiyaki.herokuapp.com/
 - 回答する際も画像、動画が投稿可能
 - 回答に対していいねが付けられる
 - インクリメンタルサーチ
-
-## リンク
-https://snow9taiyaki.herokuapp.com/
 
 質問者テストアカウント
 email: test@test
