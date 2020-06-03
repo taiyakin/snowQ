@@ -58,18 +58,15 @@ Pass : aaaaaaaa
 - 投稿をカテゴリごとに分類することで見やすく表示
 [![Image from Gyazo](https://i.gyazo.com/3492b4b612df769f84d087780513a61d.gif)](https://gyazo.com/3492b4b612df769f84d087780513a61d)
 
-- 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
-[![Image from Gyazo](https://i.gyazo.com/7b95aa7a2358c7579843b43e3d6351a0.gif)](https://gyazo.com/7b95aa7a2358c7579843b43e3d6351a0)
-
+- 非同期でいいね機能を実装
+[![Image from Gyazo](https://i.gyazo.com/90aa438de9426442614e43b147df0da9.gif)](https://gyazo.com/90aa438de9426442614e43b147df0da9)
 
 - ユーザーの名前や「自分の投稿」クリックするとそのユーザーの質問一覧が表示される
 [![Image from Gyazo](https://i.gyazo.com/6a7d87b2cdad0ecda6f779416f2a5d85.gif)](https://gyazo.com/6a7d87b2cdad0ecda6f779416f2a5d85)
 
-- 非同期でいいね機能を実装
-[![Image from Gyazo](https://i.gyazo.com/f97519d99c3d579d94d0e24d2061e6b4.gif)](https://gyazo.com/f97519d99c3d579d94d0e24d2061e6b4)
 
 - 本番環境では動画や画像はS3に保存される
-
+- 質問、回答どちらにも画像、動画を添付可能にして説明を伝えやすく
 
 ## 使用技術（開発環境）
 Ruby 2.5.1<br>
