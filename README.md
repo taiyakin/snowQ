@@ -45,9 +45,7 @@ Pass : aaaaaaaa
 ここから生まれる交流によってスノーボードを愛する人が増えること、その一助になることを願います！
 
 ## DEMO
-[![Image from Gyazo](https://i.gyazo.com/6423beb275236f662acb7b7fb5f31fa4.gif)](https://gyazo.com/6423beb275236f662acb7b7fb5f31fa4)
-
-[![Image from Gyazo](https://i.gyazo.com/bb68f586b5288c5b2898dce6389abcc0.gif)](https://gyazo.com/bb68f586b5288c5b2898dce6389abcc0)
+[![Image from Gyazo](https://i.gyazo.com/036acec0e3cc764e9364e5a7a1d42efe.gif)](https://gyazo.com/036acec0e3cc764e9364e5a7a1d42efe)
 
 
 ## 工夫したポイント
