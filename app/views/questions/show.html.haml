@@ -39,7 +39,6 @@
           = link_to answer.user.name, "/users/#{answer.user_id}"
           ：
           = safe_join(answer.text.split("\n"),tag(:br))
-
           = image_tag answer.image.url, class: 'contents__question__image' if answer.image.present?
           = video_tag answer.video.url,controls: true, class: 'contents__question__video' if answer.video.present?
           %div{id: "like-#{answer.id}"}
