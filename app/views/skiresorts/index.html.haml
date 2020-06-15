@@ -1,28 +1,10 @@
-%h1 Listing skiresorts
+- @skiresorts.each do |skiresort|
+  = link_to "/skiresorts/#{skiresort.id}", class:"main-content__list__skiresort" do
+    .main-content__list__skiresort-title
+      = skiresort.name
+    .main-content__list__skiresort-text
+      = skiresort.address
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Ancestry
-      %th Address
-      %th Latitude
-      %th Longitude
-      %th
-      %th
-      %th
 
-  %tbody
-    - @skiresorts.each do |skiresort|
-      %tr
-        %td= skiresort.name
-        %td= skiresort.ancestry
-        %td= skiresort.address
-        %td= skiresort.latitude
-        %td= skiresort.longitude
-        %td= link_to 'Show', skiresort
-        %td= link_to 'Edit', edit_skiresort_path(skiresort)
-        %td= link_to 'Destroy', skiresort, method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
 
