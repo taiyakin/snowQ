@@ -12,6 +12,15 @@ class SkiresortsController < ApplicationController
   def show
   end
 
+  def map
+    results = Geocoder.search(params[:address])
+    @latlng = results.first.coordinates
+    # これでmap.js.erbで、経度緯度情報が入った@latlngを使える。
+    @skiresorts = Skiresort.all
+    respond_to do |format|
+      format.js
+    end
+  end
   # GET /skiresorts/new
   def new
     @skiresort = Skiresort.new

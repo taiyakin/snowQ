@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   end
   resources :categories
   resources :skiresorts
+  get '/map_request', to: 'skiresorts#map', as: 'map_request'
+
 
 end
