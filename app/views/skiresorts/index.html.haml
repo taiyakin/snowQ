@@ -1,0 +1,10 @@
+- @skiresorts.each do |skiresort|
+  = link_to "/skiresorts/#{skiresort.id}", class:"main-content__list__skiresort" do
+    .main-content__list__skiresort-title
+      = skiresort.name
+    .main-content__list__skiresort-text
+      = skiresort.address
+
+
+
+

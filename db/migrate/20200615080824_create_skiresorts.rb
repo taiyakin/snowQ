@@ -1,0 +1,12 @@
+class CreateSkiresorts < ActiveRecord::Migration[5.0]
+  def change
+    create_table :skiresorts do |t|
+      t.string :name,null: false
+      t.string :ancestry
+      t.string :address
+      t.float :latitude
+      t.float :longitude
+      t.timestamps
+    end
+  end
+end
