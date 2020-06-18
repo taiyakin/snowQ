@@ -10,6 +10,10 @@ class SkiresortsController < ApplicationController
   # GET /skiresorts/1
   # GET /skiresorts/1.json
   def show
+    @lat = @skiresort.latitude
+    @lng = @skiresort.longitude
+    gon.lat = @lat
+    gon.lng = @lng
   end
 
   def map

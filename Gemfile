@@ -87,3 +87,5 @@ gem 'rmagick'
 gem "geocoder"
 gem 'ancestry'
 gem "dotenv-rails"
+gem "gmaps4rails"
+gem "gon"
