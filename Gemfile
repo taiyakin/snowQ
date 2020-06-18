@@ -86,3 +86,4 @@ gem 'rails-i18n', '~> 5.1'
 gem 'rmagick'
 gem "geocoder"
 gem 'ancestry'
+gem "dotenv-rails"
