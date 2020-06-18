@@ -1,0 +1,1 @@
+$("#send-btn").prop("disabled", false);
