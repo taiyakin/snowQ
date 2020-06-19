@@ -1,9 +1,12 @@
 - @skiresorts.each do |skiresort|
-  = link_to "/skiresorts/#{skiresort.id}", class:"main-content__list__skiresort" do
-    .main-content__list__skiresort-title
+  - if skiresort.ancestry.nil?
+    .main-content__list__skiresort-erea
       = skiresort.name
-    .main-content__list__skiresort-text
-      = skiresort.address
+  - else
+    = link_to "/skiresorts/#{skiresort.id}", class:"main-content__list__skiresort" do
+      .main-content__list__skiresort-name
+        = skiresort.name
+
 
 
 
